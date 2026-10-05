@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import NoteForm from '../components/NoteForm';
 import NoteCard from '../components/NoteCard';
 
-const API_BASE_URL = 'http://localhost:5000/api/notes';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/notes`;
 
 // Main Notes Page: Handles CRUD operations
 function Notes({ user, token, onLogout }) {
